@@ -1,0 +1,20 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+<div id="app">
+  <ul>
+    <li v-for="(ingredient, i) in ingredients">{{ ingredient }} ({{ i }})</li>
+  </ul>
+  <hr>
+  <ul>
+    <li v-for="person in persons">
+      <div v-for="(value, key, index) in person">{{ key }}: {{ value }} ({{ index }})</div>
+    </li>
+  </ul>
+  <hr>
+  <template v-for="(ingredient, index) in ingredients">
+    <h1>{{ ingredient }}</h1>
+    <p>{{ index }}</p>
+  </template>
+</div>
+
+<script src="app.js"></script>
